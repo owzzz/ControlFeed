@@ -3,6 +3,7 @@ ControlFeed = ControlFeed || {};
 ControlFeed.oauth = {
 	authUser: function (feedNetwork){
 		var parentObj = this.feedNetwork.Config;
+		console.log(this);
 		$.ajax({
 			url: parentObj.authUrl,
 			async: true,

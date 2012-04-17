@@ -1,0 +1,24 @@
+{
+	"SocialNetworks":[
+		{
+			"twitter":[
+				{
+					"title": "Twitter",
+					"link": "http://www.twitter.com"
+				}
+			],
+			"facebook":[
+				{
+					"title": "Facebook",
+					"link": "http://www.facebook.com"
+				}
+			],
+			"instagram":[
+				{
+					"title": "Instagram",
+					"link": "http://www.instagram.com"
+				}
+			]
+		}
+	]
+}

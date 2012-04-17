@@ -8,7 +8,17 @@
 	<meta name="author" content="Owain Llewellyn">
 </head>
 <body>
-	
+	<section class="wrapper">
+		<section class="main">
+			<nav>
+				<ul class="social-feeds">
+					<li id="fbAuth" class="button fbButton"><a href="#" title="Login with Facebook">Facebook</a></li>
+					<li id="twAuth" class="button twButton"><a href="#" title="Login with Twitter">Twitter</a></li>
+					<li id="inAuth" class="button inButton"><a href="#" title="Login with Instagram">Instagram</a></li>
+				</ul>
+			</nav>	
+		</section>
+	</section>
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <!-- Libs -->
@@ -17,11 +27,18 @@
 <script type="text/javascript" src="js/libs/backbone.0.9.2.js"></script>
 <!-- Project -->
 <script type="text/javascript" src="js/ControlFeed.js"></script>
+
+<!-- Views -->
+<script type="text/javascript" src="js/views/Home.js"></script>
+
 <!-- Controllers -->
 <script type="text/javascript" src="js/controllers/Facebook.js"></script>
 <script type="text/javascript" src="js/controllers/Instagram.js"></script>
+
+<!-- Collections -->
+<script type="text/javascript" src="js/collections/SocialFeeds.js"></script>
+
 <!-- Models -->
-<script type="text/javascript" src="js/models/Feeds.js"></script>
 <script type="text/javascript" src="js/models/Facebook.js"></script>
 <script type="text/javascript" src="js/models/Instagram.js"></script>
 <script type="text/javascript" src="js/models/Twitter.js"></script>
