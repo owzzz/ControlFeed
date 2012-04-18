@@ -9,6 +9,6 @@ ControlFeed.Controllers.Facebook = {
 		authReturnedCode: "",
 	},
 	init: function(){
-		
+		console.log('Facebook controller initialise method run');
 	}
 };

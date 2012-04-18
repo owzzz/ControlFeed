@@ -3,26 +3,29 @@ ControlFeed.Views = ControlFeed.Views || {};
 ControlFeed.Views.Home = Backbone.View.extend({
 	
 	initialize: function() {
-		console.log('this inside View init');
 		this.render();
 	},
 	
-	template: "",
+	template: "<li id=\"fbAuth\" class=\"button fbButton\"><a href=\"#\" title=\"Login with Facebook\"><%= Title %></a></li>",
 
-	tagName: "ul",
+	tagName: "nav",
 
-	className: "social-feeds",
+	className: "social-feeds-list",
 
 	events: {
-	  "click #fbAuth":    function(e) { console.log(e); e.preventDefault(); ControlFeed.Facebook.init(); },
-	  "click #twAuth":    function(e) {e.preventDefault(); ControlFeed.Twitter.init(); },
-	  "click #inAuth":    function(e) {e.preventDefault(); ControlFeed.Instagram.init(); }
+	  "click #fbAuth":    function(e) {e.preventDefault(); ControlFeed.Controllers.Facebook.init(); },
+	  "click #twAuth":    function(e) {e.preventDefault(); ControlFeed.Controllers.Twitter.init(); },
+	  "click #inAuth":    function(e) {e.preventDefault(); ControlFeed.Controllers.Instagram.init(); }
 	},
 	
 	render: function() {
-		console.log('render view');
+		// Compile the template using underscore
+		var template = _.template( this.template, {Title: "facebook"} );
+		// Load the compiled HTML into the Backbone "el"
+		console.log(this.$el);
+		this.$el.html( template );
 	},
 	
-	model: {}
+	model: new ControlFeed.Models.SocialFeed
 
 });

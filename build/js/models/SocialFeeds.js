@@ -1,17 +1,13 @@
 ControlFeed = ControlFeed || {};
 ControlFeed.Models = ControlFeed.Models || {};
 
-ControlFeed.Models.SocialFeeds = Backbone.Model.extend({
+ControlFeed.Models.SocialFeed = Backbone.Model.extend({
 	
 	url: "../../data/socialnetworks.json",
 	
-	defaults: {
-      title: "Social Network",
-      link: "http://www.example.com"
-    },
-	
 	initialize: function() {
+		this.toJSON();
 		console.log('Social Feeds initialized');
-	},
+	}
 
 });
